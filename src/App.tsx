@@ -1,11 +1,27 @@
-import { JSONDive } from "@jsondive/viewer"
+import { JSONDive, type JSONDiveOptions } from "@jsondive/viewer"
 
 import "@jsondive/viewer/dist/root.css"
+import { useMemo } from "react"
+import * as lucideReact from "lucide-react"
 
 function App() {
+	const options = useMemo(
+		(): JSONDiveOptions => ({
+			onValueMagnified(args) {
+				console.log(`Value magnified: ${args.value}`)
+			},
+
+			icons: {
+				magnify: lucideReact.Sun,
+				image: lucideReact.Sailboat,
+			},
+		}),
+		[]
+	)
+
 	return (
 		<div style={{ width: 400, height: 400 }}>
-			<JSONDive data={jsonDoc} />
+			<JSONDive data={jsonDoc} options={options} />
 		</div>
 	)
 }
