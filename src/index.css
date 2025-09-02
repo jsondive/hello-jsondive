@@ -8,3 +8,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+.json-dive-viewer-instance {
+	--json-dive-color-badge-background: oklch(
+		0.902 0.063 306.703
+	); /* purple-200 */
+}
