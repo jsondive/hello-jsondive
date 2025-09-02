@@ -1,6 +1,7 @@
 import {
 	Attribute,
 	builtinAttribute,
+	defaultActions,
 	DocumentInput,
 	JSONDive,
 	NodeBuilder,
@@ -50,6 +51,8 @@ function App() {
 					return []
 				},
 			},
+			// Adds expand/collapse all, etc, to context menu.
+			defaultActions(),
 		]
 	}, [])
 
