@@ -10,8 +10,8 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@jsondive/library": "^0.0.10",
-		"@jsondive/viewer": "^0.0.10",
+		"@jsondive/library": "^0.0.13",
+		"@jsondive/viewer": "^0.0.13",
 		"react": "^19.1.1",
 		"react-dom": "^19.1.1"
 	},
